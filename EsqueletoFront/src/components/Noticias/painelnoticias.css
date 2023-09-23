@@ -1,0 +1,128 @@
+.news-container {
+  width: 100vw;
+  padding: 0 10vw;
+}
+
+.news-container h1 {
+  font-size: 2rem;
+}
+
+.news-container hr {
+  margin-bottom: 2em;
+}
+
+.news-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-gap: 2rem;
+}
+
+.news-item {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  margin-bottom: 2rem;
+}
+
+.news-img-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+}
+
+.news-img-container img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.news-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.news-text-container {
+  padding: 1rem;
+  background-color: #f7f7f7;
+  border-radius: 0 0 0.25rem 0.25rem;
+  flex: 1;
+}
+
+.news-text-title {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.news-text-content {
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  line-height: 1.5;
+  color: #333;
+  font-size: large;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  line-height: 18px;     /* fallback */
+  -webkit-line-clamp: 3; /* number of lines to show */
+  -webkit-box-orient: vertical;
+  margin-bottom: 1em;
+}
+
+.news-link-container {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: auto;
+}
+
+.news-link {
+  font-size: 1.1rem;
+  color: #333;
+  text-decoration: none;
+  border-bottom: 2px solid #333;
+  padding-bottom: 0.1rem;
+  transition: all 0.3s;
+}
+
+.news-link:hover {
+  color: orange;
+}
+
+@media screen and (max-width: 1024px) {
+  .news-grid {
+    grid-template-columns: repeat(auto-fit, minmax(480px, 1fr));
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .news-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+
+  .news-item {
+    height: auto;
+  }
+
+  .news-img-container {
+    height: 150px;
+  }
+
+  .news-text-title {
+    font-size: 1rem;
+  }
+
+  .news-text-content {
+    font-size: 0.8rem;
+    -webkit-line-clamp: 4;
+  }
+
+  .news-link {
+    font-size: 1rem;
+  }
+}
